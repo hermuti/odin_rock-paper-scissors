@@ -1,0 +1,46 @@
+* {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: grey;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button {
+  width: 150px;
+  height: 50px;
+  background-color: aqua;
+  border-radius: 4px;
+  font-size: large;
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 10px 20px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+button:hover {
+  cursor: pointer;
+  color: red;
+}
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: blue;
+  z-index: -1;
+  transition: 0.8s;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+button:hover::before {
+  height: 180%;
+}
+
+h1 {
+  color: antiquewhite;
+}
